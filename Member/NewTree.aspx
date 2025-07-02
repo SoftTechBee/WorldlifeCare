@@ -75,10 +75,10 @@
                             + '<h6>Current Right Business: ' + maindata[0].CurrentRightBus + '</h6>'
                             + '<h6>Total Left Business: ' + maindata[0].TotalLeftBus + '</h6>'
                             + '<h6>Total Right Business: ' + maindata[0].TotalRightBus + '</h6>'
-                            + '<h6>Current Left PV: ' + maindata[0].CurrentLeftPV + '</h6>'
-                            + '<h6>Current Right PV: ' + maindata[0].CurrentRightPV + '</h6>'
-                            + '<h6>Total Left PV: ' + maindata[0].TotalLeftPV + '</h6>'
-                            + '<h6>Total Right PV: ' + maindata[0].TotalRightPV + '</h6>'
+                            + '<h6>Current Left SV: ' + maindata[0].CurrentLeftPV + '</h6>'
+                            + '<h6>Current Right SV: ' + maindata[0].CurrentRightPV + '</h6>'
+                            + '<h6>Total Left SV: ' + maindata[0].TotalLeftPV + '</h6>'
+                            + '<h6>Total Right SV: ' + maindata[0].TotalRightPV + '</h6>'
                             
                         $("#details").html(details);
 

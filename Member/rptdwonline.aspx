@@ -36,12 +36,12 @@
 <asp:BoundField DataField="Status" HeaderText="Account Status" />
 <asp:BoundField DataField="dateofjoining" DataFormatString="{0:dd/MM/yyyy}" HeaderText="DateofJoining" />
 <asp:BoundField DataField="mobile" HeaderText="Mobile Number" />
-<asp:BoundField DataField="PV" HeaderText="PV" />
+<asp:BoundField DataField="PV" HeaderText="SV" />
 <%--<asp:BoundField DataField="BV" HeaderText="BV" />--%>
 <%--<asp:BoundField DataField="Capping" HeaderText="Capping" />--%>
 <%--<asp:BoundField DataField="Matching" HeaderText="Matching" />--%>
-<asp:BoundField DataField="salary" HeaderText="Salary" />
-<asp:BoundField DataField="Royalty" HeaderText="Royalty" />
+<%--<asp:BoundField DataField="salary" HeaderText="Salary" />
+<asp:BoundField DataField="Royalty" HeaderText="Royalty" />--%>
 <asp:BoundField DataField="loginstatus" HeaderText="Login Status" />
             </columns>
           

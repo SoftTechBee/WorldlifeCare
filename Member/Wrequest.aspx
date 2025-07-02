@@ -58,24 +58,8 @@
                                             </div>
                                         </div>
                                         <br />
-                                  <div class=" form-group row">
-                                          
-
-                                            <label class="control-label col-lg-2">Total Capping </label>
-                                            <div class="col-lg-2">
-                                                ₹<asp:Label ID="lbcappiong"  CssClass="text-danger fw-bold"   Text="0"  runat="server" ></asp:Label>
-                                            </div>
-                                       <label class="control-label col-lg-2">Withdraw List </label>
-                                            <div class="col-lg-2">
-                                                ₹<asp:Label ID="lbWithdraw" CssClass="text-success fw-bold"  Text="0"  runat="server" ></asp:Label>
-                                            </div>
-                                        
-                                 <label class="control-label col-lg-2">Remaining </label>
-                                            <div class="col-lg-2">
-                                                ₹<asp:Label ID="lbRemaining"  CssClass="text-warning fw-bold"  Text="0"   runat="server" ></asp:Label>
-                                            </div>
-                                       </div>
-                                        <br />
+                                
+                                       
                                         <div class=" form-group row">
                                           
 

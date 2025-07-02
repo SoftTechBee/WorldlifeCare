@@ -74,7 +74,7 @@ public partial class Member_Default : System.Web.UI.Page
     {
         try
         {
-            string sql = "select doa,reward,rankname,mobile,status,username,email,dateofjoin,name,rankname,joinAmount,country,PackType from register  where username='" + SessionData.Get<string>("Newuser") + "'";
+            string sql = "select Pv,capping,doa,reward,rankname,mobile,status,username,email,dateofjoin,name,rankname,joinAmount,country,PackType from register  where username='" + SessionData.Get<string>("Newuser") + "'";
             DataTable dt = objcon.ReturnDataTableSql(sql);
 
             if (dt.Rows.Count > 0)
@@ -87,9 +87,11 @@ public partial class Member_Default : System.Web.UI.Page
                 lbmobile.Text = dt.Rows[0]["mobile"].ToString();
                // lbusername.Text = dt.Rows[0]["username"].ToString();
                 lbemail.Text = dt.Rows[0]["email"].ToString();
-              
-               // lbreward.Text = dt.Rows[0]["reward"].ToString();
-                   lbpack.Text = dt.Rows[0]["PackType"].ToString();
+
+                lbReward.Text = dt.Rows[0]["reward"].ToString();
+                lvSB.Text = dt.Rows[0]["Pv"].ToString();
+                   lbpack.Text = dt.Rows[0]["capping"].ToString();
+                   //lbpack.Text = dt.Rows[0]["PackType"].ToString();
                 lbtotalrepurchase.Text = dt.Rows[0]["joinAmount"].ToString();
 
                 lbstatus.Text = dt.Rows[0]["status"].ToString();

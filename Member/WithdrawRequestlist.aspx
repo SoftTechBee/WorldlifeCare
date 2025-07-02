@@ -58,10 +58,11 @@
                                             <ItemStyle Width="10%" />
                                         </asp:TemplateField>
                                         <asp:BoundField DataField="username" HeaderText="UserID"></asp:BoundField>
-                                        <asp:BoundField DataField="Packtype" HeaderText="Mode"></asp:BoundField>
+                                        <%--<asp:BoundField DataField="Packtype" HeaderText="Mode"></asp:BoundField>--%>
                                         <asp:BoundField DataField="Amount" HeaderText="Amount"></asp:BoundField>
                                         <asp:BoundField DataField="AdminCharge" HeaderText="AdminCharge"></asp:BoundField>
                                         <asp:BoundField DataField="TDS" HeaderText="TDS"></asp:BoundField>
+                                        <asp:BoundField DataField="WalletFund" HeaderText="WalletFund"></asp:BoundField>
 										
                                         <asp:BoundField DataField="Payout" HeaderText="Payout"></asp:BoundField>
                                         <asp:BoundField DataField="Bankname" HeaderText="Bank_Name"></asp:BoundField>

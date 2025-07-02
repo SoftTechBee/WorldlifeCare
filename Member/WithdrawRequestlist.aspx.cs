@@ -30,7 +30,7 @@ public partial class User_Default : System.Web.UI.Page
         try
         {
             
-            string sql = " select r.tds,r.PackType,r.IncomeType,LEFT(r.PackType, 4) AS CoinType,r.Rid, r.username,r.Amount,r.DOR,r.DOA,r.remark,r.status,b.*,r.Payout,r.AdminCharge,r.Wallet from TblRWithdraw  r Left Join bankdetail b on r.Username=b.Username where  r.username='" + username+"'";
+            string sql = " select r.WalletFund,r.tds,r.PackType,r.IncomeType,LEFT(r.PackType, 4) AS CoinType,r.Rid, r.username,r.Amount,r.DOR,r.DOA,r.remark,r.status,b.*,r.Payout,r.AdminCharge,r.Wallet from TblRWithdraw  r Left Join bankdetail b on r.Username=b.Username where  r.username='" + username+"'";
             if (txtfromdate.Text != "" && txttodate.Text != "")
             {
                 sql += "and r.dor between '" + txtfromdate.Text + "' and '" + txttodate.Text + "'";

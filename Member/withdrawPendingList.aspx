@@ -62,6 +62,7 @@
                                     <th>Amount</th>
                                     <th>Admin Charge</th>
                                     <th>TDS</th>
+                                    <th>WalletFund</th>
                                     <th>Tour Deductions</th>
                                     <th>Purchase Deductions</th>
                                     <th>Payout Transfer</th>
@@ -85,6 +86,8 @@
                                             <asp:Label ID="Label2" runat="server" Text='<%#Eval("AdminCharge") %>'></asp:Label></td>
                                         <td>
                                             <asp:Label ID="Label12" runat="server" Text='<%#Eval("TDS") %>'></asp:Label></td>
+                                       <td>
+                                            <asp:Label ID="WalletFund" runat="server" Text='<%#Eval("WalletFund") %>'></asp:Label></td>
                                           <td>
                                             <asp:Label ID="Label1112" runat="server" Text='<%#Eval("PurchaseDeduction") %>'></asp:Label></td>
                                         <td>

@@ -150,7 +150,7 @@ public partial class User_TopUpWallet : System.Web.UI.Page
                 {
 
 
-                    int a = objamd.ActiveMember(id, Price, BV,  "Buy Products",  SessionData.Get<string>("Newuser"), "R");
+                    int a = objamd.ActiveMember(id, Price, BV,  "PRODUCTS PURCHASE",  SessionData.Get<string>("Newuser"), "R");
                     if (a > 0)
                     {
 

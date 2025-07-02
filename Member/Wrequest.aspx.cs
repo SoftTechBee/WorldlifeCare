@@ -30,13 +30,14 @@ public partial class User_withdrrawPlan1 : System.Web.UI.Page
             danger.Visible = false;
            // paymenttype_TextChanged(sender, e);
             lbIncome.Text = objDash.IncomeBalance(SessionData.Get<string>("Newuser"));
-            Cap();
+            decimal SelfBusines = Convert.ToDecimal( objDash.SelfBusiness(SessionData.Get<string>("Newuser")));
+          
             //int time = Convert.ToInt32(objtime.returnCurrentSurverTimeHH());
 
 
             string dayname = objtime.returnCurrentDay();
             //if (dayname == "Monday" && time >= 10 && time <= 17)
-            if (dayname == "Monday")
+            if (dayname != "Monday" && SelfBusines>=1850)
             {
 
 
@@ -71,7 +72,8 @@ public partial class User_withdrrawPlan1 : System.Web.UI.Page
                 warning.Visible = false;
                 sccess.Visible = false;
                 info.Visible = false;
-                lbdanger.Text = "You can proceed with the withdrawal process on Monday.!!!";
+                lbdanger.Text = "Heads up! To access your earnings, a ₹1850+ product purchase is required. Withdrawals start Monday!";
+
 
                 danger.Visible = true;
                 txtAmt.ReadOnly = true;
@@ -79,12 +81,7 @@ public partial class User_withdrrawPlan1 : System.Web.UI.Page
             }
         }
     }
-    public void Cap()
-    {
-        lbcappiong.Text = objDash.Capping(SessionData.Get<string>("Newuser"));
-        lbWithdraw.Text = objDash.CappingWithdraw(SessionData.Get<string>("Newuser"));
-        lbRemaining.Text = (Convert.ToDecimal(lbcappiong.Text) - Convert.ToDecimal(lbWithdraw.Text)).ToString();
-    }
+  
 
     public void loadclean()
     {
@@ -130,7 +127,7 @@ public partial class User_withdrrawPlan1 : System.Web.UI.Page
 
             string id = SessionData.Get<string>("Newuser");
             decimal finalamount = Convert.ToDecimal(lbIncome.Text.Trim());
-            decimal capp = Convert.ToDecimal(lbRemaining.Text.Trim());
+           // decimal capp = Convert.ToDecimal(lbRemaining.Text.Trim());
            string TransPass = objDash.ReturnTransPass(SessionData.Get<string>("Newuser"));
             widamount = Convert.ToDecimal(txtAmt.Text.Trim());
             if (TransPass == txtpassword.Text)
@@ -141,7 +138,7 @@ public partial class User_withdrrawPlan1 : System.Web.UI.Page
                 //    {
                 //if (TransPass == txttransPassword.Text)
                 //{
-                if (finalamount >= widamount && widamount >= 100  && widamount<= capp)
+                if (finalamount >= widamount && widamount >= 100)
                         {
                            
 
@@ -149,7 +146,7 @@ public partial class User_withdrrawPlan1 : System.Web.UI.Page
                             if (a > 0)
                             {
                                 lbIncome.Text = objDash.IncomeBalance(SessionData.Get<string>("Newuser"));
-                                Cap();
+                               
                                 //string email = objDash.ReturnEmail(SessionData.Get<string>("Newuser"));
                                 // objmail.WithdrawFund(SessionData.Get<string>("Newuser"), widamount.ToString(), paymenttype.SelectedValue, address, email);
 
@@ -259,10 +256,10 @@ public partial class User_withdrrawPlan1 : System.Web.UI.Page
         {
             //if (drpIncomeType.SelectedValue != "0")
             //{
-            decimal capp = Convert.ToDecimal(lbRemaining.Text.Trim());
+            //decimal capp = Convert.ToDecimal(lbRemaining.Text.Trim());
             decimal finalamount = Convert.ToDecimal(lbIncome.Text.Trim());
                 decimal reqAmt = Convert.ToDecimal(txtAmt.Text);
-                if (finalamount >= reqAmt && reqAmt <= capp)
+                if (finalamount >= reqAmt )
                 {
                     if (reqAmt >= 100 )
                     {

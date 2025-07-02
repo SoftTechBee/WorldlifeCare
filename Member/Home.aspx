@@ -92,15 +92,20 @@
                         <div class="col-11">
                        <%--     <h4 class="fw-normal">Your Available Income</h4>
                             <h1 class="mb-3">₹<asp:Label ID="lbbalance" runat="server" Text="0"></asp:Label></h1>--%>
-                            <p>Date Of Join: <span class="badge  badge-sm text-bg-warning">
+                            <p  class="fw-bold">Date Of Join: <span class="badge  badge-sm text-bg-primary">
                                 <asp:Label ID="lbDOJ" runat="server" Text="N/A"></asp:Label></span></p>
-                            <p>Acount Status: <span class="badge badge-sm text-bg-warning">
+                            <p class="fw-bold">Acount Status: <span class="badge badge-sm text-bg-primary">
                                 <asp:Label ID="lbstatus" runat="server" Text="N/A"></asp:Label></span></p>
-                            <p>Current Package: <span class="badge badge-sm text-bg-warning">
+                            <p class="fw-bold">Current Capping: <span class="badge badge-sm text-bg-primary">
                                 <asp:Label ID="lbpack" runat="server" Text="N/A"></asp:Label></span></p>
-                            <p>Mobile: <span class="badge badge-sm text-bg-warning">
+                             <p class="fw-bold">Current Reward: <span class="badge badge-sm text-bg-primary">
+                                <asp:Label ID="lbReward" runat="server" Text="N/A"></asp:Label></span></p>
+                             <p class="fw-bold">Self SV: <span class="badge badge-sm text-bg-primary">
+                                <asp:Label ID="lvSB" runat="server" Text="0"></asp:Label></span></p>
+                           
+                            <p class="fw-bold">Mobile: <span class="badge badge-sm text-bg-primary">
                                 <asp:Label ID="lbmobile" runat="server" Text="N/A"></asp:Label></span></p>
-                            <p>Email: <span class="badge badge-sm text-bg-warning">
+                            <p class="fw-bold">Email: <span class="badge badge-sm text-bg-primary">
                                 <asp:Label ID="lbemail" runat="server" Text="N/A"></asp:Label></span></p>
                         </div>
                     </div>
