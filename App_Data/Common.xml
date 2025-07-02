@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Commons>
+  <AboutUs title="AboutUs">
+    <PageContent>&lt;p&gt;&lt;span class="st"&gt;In the previous program we create an &lt;em&gt;XML file&lt;/em&gt; and named it as products.xml. The following &lt;em&gt;C#&lt;/em&gt; program &lt;em&gt;read&lt;/em&gt; that file and extract the contents inside the XML tag.&lt;/span&gt;&lt;/p&gt;</PageContent>
+    <PageTitle>About Us | BullTradeIndia</PageTitle>
+    <SeoKeyword>BullTradeIndia</SeoKeyword>
+    <SeoDescription>BullTradeIndia</SeoDescription>
+  </AboutUs>
+  <ContactUs title="ContactUs">
+    <PageContent>&lt;p&gt;&lt;span class="st"&gt;XML is a platform independent language, so the information formatted in XML can be used in any other platforms (Operating Systems) ... sender, EventArgs e) { XmlTextWriter &lt;em&gt;writer&lt;/em&gt; = new XmlTextWriter("product.xml", System. ... filter in a &lt;em&gt;XML file&lt;/em&gt; &amp;middot; How to insert &lt;em&gt;data from XML&lt;/em&gt; to database &amp;middot; How to create Excel file from XML&lt;wbr /&gt;&amp;nbsp;...&lt;/span&gt;&lt;/p&gt;</PageContent>
+    <PageTitle>ContactUs Us | BullTradeIndia</PageTitle>
+    <SeoKeyword>BullTradeIndia</SeoKeyword>
+    <SeoDescription>BullTradeIndia</SeoDescription>
+  </ContactUs>
+</Commons>
