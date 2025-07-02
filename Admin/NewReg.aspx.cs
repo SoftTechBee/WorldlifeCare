@@ -28,7 +28,7 @@ public partial class User_Default : System.Web.UI.Page
             else
             {
 
-                lbSponser.Text = "NG100001";
+                lbSponser.Text = "WLC100001";
                 lbUserName.Text = loaduseridsixdigit();
                try
                 {
@@ -98,7 +98,7 @@ public partial class User_Default : System.Web.UI.Page
 
             var finalString = new String(stringChars);
             capta = Convert.ToString(finalString);
-            newuser = "NG" + capta;
+            newuser = "WLC" + capta;
             DataTable dt1 = objcon.ReturnDataTableSql("select * from register where username='" + newuser + "'");
             if (dt1.Rows.Count > 0)
             {

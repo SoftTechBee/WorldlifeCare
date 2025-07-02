@@ -54,7 +54,7 @@
                   <%-- <th>BV</th>
                    <th>Capping</th>
                    <th>Matching</th>--%>
-                   <th>Current Salary</th>
+                   <th>Current Royalty</th>
                    <th>Current Reward</th>
                    <th>Blocked Status </th>
                   
@@ -81,7 +81,7 @@
                  <%--  <td><%#Eval("BV") %></td>
                    <td><%#Eval("Capping") %></td>
                    <td><%#Eval("Matching") %></td>--%>
-                   <td><%#Eval("salary") %></td>
+                   <td><%#Eval("Royalty") %></td>
                    <td><%#Eval("reward") %></td>
                                       <td><%#Eval("loginstatus") %></td>
           

@@ -304,8 +304,9 @@
               
              <%-- <li><a href="SalaryReport.aspx"><i class="material-icons-outlined">arrow_right</i>Salary Report</a>
               </li>
-                <li><a href="BinaryReport.aspx"><i class="material-icons-outlined">arrow_right</i>Binary Report</a>
-              </li>--%>
+               --%>
+                 <li><a href="BinaryReport.aspx"><i class="material-icons-outlined">arrow_right</i>Binary Report</a>
+              </li>
                <li><a href="RewardReport.aspx"><i class="material-icons-outlined">arrow_right</i>Reward Report</a>
               </li>
               

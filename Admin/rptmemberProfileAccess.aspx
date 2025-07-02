@@ -123,7 +123,7 @@
                                                     <th>Name</th>
                                                     <th>Sponser</th>
                                                     <th>Status</th>
-                                                    <th>Daily ROI(%)</th>
+                                                 <%--   <th>Daily ROI(%)</th>--%>
                                                     <th>Mobile</th>
                                                     <th>Email</th>
                                                     <th>Password</th>
@@ -179,9 +179,9 @@
                                                             <td>
                                                                 <%#Eval("status") %>
                                                             </td> 
-                                                            <td>
+                                                          <%--  <td>
                                                                 <%#Eval("ROI") %>
-                                                            </td>
+                                                            </td>--%>
                                                             <td>
                                                                 <%#Eval("MObile") %>
                                                             </td>

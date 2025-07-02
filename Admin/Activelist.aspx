@@ -44,10 +44,10 @@
                    <th>Amount</th>
                    <th>Package</th>
                    <th>PV</th>
-                   <th>BV</th>
+                  <%-- <th>BV</th>--%>
                    <th>Capping</th>
-                   <th>Matching</th>
-                   <th>Current Salary</th>
+                 <%--  <th>Matching</th>
+                   <th>Current Salary</th>--%>
                    <th>Current Royalty</th>
                    <th>Blocked Status </th>
                   
@@ -73,10 +73,10 @@
                    <td><%#Eval("JoinAmount") %></td>
                    <td><%#Eval("PackType") %></td>
                    <td><%#Eval("PV") %></td>
-                   <td><%#Eval("BV") %></td>
+                 <%--  <td><%#Eval("BV") %></td>--%>
                    <td><%#Eval("Capping") %></td>
-                   <td><%#Eval("Matching") %></td>
-                   <td><%#Eval("salary") %></td>
+                   <%--<td><%#Eval("Matching") %></td>
+                   <td><%#Eval("salary") %></td>--%>
                    <td><%#Eval("Royalty") %></td>
                                       <td><%#Eval("loginstatus") %></td>
 
