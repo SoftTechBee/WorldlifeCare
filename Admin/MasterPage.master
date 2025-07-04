@@ -197,9 +197,22 @@
                       <li><a href="NewReg.aspx"><i class="material-icons-outlined">arrow_right</i>Demo Registration</a>
               </li>
      
-                      <li><a href="AddProduct.aspx"><i class="material-icons-outlined">arrow_right</i>Add Products</a>
+                  
+            </ul>  
+                <li>
+            <a class="has-arrow" href="#">
+              <div class="parent-icon"><i class="material-icons-outlined">toc</i>
+              </div>
+              <div class="menu-title">Product Msaster</div>
+            </a>
+            <ul>
+                 <li><a href="AddProduct.aspx"><i class="material-icons-outlined">arrow_right</i>Add Products</a>
               </li>
-            </ul>     
+                <li><a href="InvoiceList.aspx"><i class="material-icons-outlined">arrow_right</i>User Invoice</a>
+              </li>
+             
+            </ul>
+          </li>
              <li>
             <a class="has-arrow" href="javascript:;">
               <div class="parent-icon"><i class="material-icons-outlined">view_agenda</i>

@@ -138,7 +138,7 @@ public partial class User_withdrrawPlan1 : System.Web.UI.Page
                 //    {
                 //if (TransPass == txttransPassword.Text)
                 //{
-                if (finalamount >= widamount && widamount >= 100)
+                if (finalamount >= widamount && widamount >= 400)
                         {
                            
 
@@ -192,7 +192,7 @@ public partial class User_withdrrawPlan1 : System.Web.UI.Page
                             sccess.Visible = false;
                             info.Visible = false;
                             warning.Visible = true;
-                            lbwarning.Text = "Insufficient Amount (or) Minimum Withdrawal 100 and Reamining Capping Check Limit Please";
+                            lbwarning.Text = "Insufficient Amount (or) Minimum Withdrawal 400 ";
 
                         }
                 //}
@@ -261,7 +261,7 @@ public partial class User_withdrrawPlan1 : System.Web.UI.Page
                 decimal reqAmt = Convert.ToDecimal(txtAmt.Text);
                 if (finalamount >= reqAmt )
                 {
-                    if (reqAmt >= 100 )
+                    if (reqAmt >= 400 )
                     {
                     //if (reqAmt % 5 == 0)
                     //{
@@ -301,7 +301,7 @@ public partial class User_withdrrawPlan1 : System.Web.UI.Page
                         danger.Visible = false;
                         sccess.Visible = false;
                         info.Visible = false;
-                        lbwarning.Text = "Amount should be greater than 100";
+                        lbwarning.Text = "Amount should be greater than 400";
                         warning.Visible = true;
                         txtAmt.Text = "";
                         txtAmt.Focus();

@@ -19,6 +19,7 @@ public partial class Admin_Default : System.Web.UI.Page
        
             if (!IsPostBack)
             {
+            lbtotapurchasing.Text = objdash.totapurchasing();
             lbTotalDeposite.Text = objdash.CompanyTurnOver();
             lbTotalWithdrawal.Text = objdash.Totalwithdraw();
             lbpendingwithdraw.Text = objdash.Totalwithdraw();

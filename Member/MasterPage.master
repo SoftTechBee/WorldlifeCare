@@ -257,7 +257,7 @@
 
                        <div class="nav-item">
                             <a href="PurchaseHistory.aspx" class="nav-link">
-                                <i class="menu-icon bi bi-dot"></i> <span class="menu-name">Package History</span>
+                                <i class="menu-icon bi bi-dot"></i> <span class="menu-name">My Carts</span>
                             </a>
                         </div>
                       

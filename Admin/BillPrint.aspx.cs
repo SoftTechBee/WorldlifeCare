@@ -41,7 +41,7 @@ public partial class Admin_BillPrint : System.Web.UI.Page
             if (dt.Rows.Count > 0)
             {
 
-                //lbdelivertype.Text = "By Courier";
+                //  lbdelivertype.Text = "By Courier";
 
                 Repeater1.DataSource = dt;
                 Repeater1.DataBind();
@@ -62,11 +62,16 @@ public partial class Admin_BillPrint : System.Web.UI.Page
     {
         try
         {
-            string sql = "select b.*,r.* from tblsalebill b inner join register r on b.username=r.username  where b.username='" + Username + "'  ";
+            string InvoiceNo = Request.QueryString["invoiceNo"].ToString();
+
+            string sql = "select b.*,r.* from tblsalebill b inner join register r on b.username=r.username  where b.username='" + Username + "' and b.InvoiceNo='" + InvoiceNo + "'   ";
             DataTable dt = objcon.ReturnDataTableSql(sql);
             if (dt.Rows.Count > 0)
             {
 
+
+                lbdelivertype.Text = dt.Rows[0]["DeliveryType"].ToString();
+                lbshipping.Text = dt.Rows[0]["GSTAmt"].ToString();
                 lbpaystatus.Text = dt.Rows[0]["paid"].ToString();
                 lbusername.Text = dt.Rows[0]["username"].ToString();
                 lbshipname.Text = dt.Rows[0]["name"].ToString();
@@ -105,28 +110,29 @@ public partial class Admin_BillPrint : System.Web.UI.Page
                 lbtotalBV.Text = dt.Rows[0]["BV"].ToString();
                 totaldiscount.Text = dt.Rows[0]["Discount"].ToString();
                 totaldp.Text = dt.Rows[0]["DP"].ToString();
-                string TotalDP = dt.Rows[0]["DP"].ToString();
                 totalmrp.Text = dt.Rows[0]["MRP"].ToString();
 
                 Decimal TotalBV = Convert.ToDecimal(lbtotalBV.Text);
-                if (TotalBV >= 1 && TotalBV <= 500)
-                {
-                    lbgrandtotal.Text = TotalDP;
-                    lbshipping.Text = "100";
-                    lbtotalpayout.Text = (Convert.ToDecimal(TotalDP) + 100).ToString();
-                }
-                else if (TotalBV >= 501 && TotalBV <= 999)
-                {
-                    lbgrandtotal.Text = TotalDP;
-                    lbshipping.Text = "200";
-                    lbtotalpayout.Text = (Convert.ToDecimal(TotalDP) + 200).ToString();
-                }
-                else
-                {
-                    lbshipping.Text = "Free";
-                    lbtotalpayout.Text = Convert.ToDecimal(TotalDP).ToString();
-                    lbgrandtotal.Text = TotalDP;
-                }
+                Decimal TotalDP = Convert.ToDecimal(totaldp.Text);
+                //if(TotalBV  >= 1 && TotalBV <= 500)
+                //{
+                //    lbgrandtotal.Text = TotalDP;
+                //    lbshipping.Text = "free";
+                //    lbtotalpayout.Text = (Convert.ToDecimal(TotalDP)).ToString();
+                //}
+                //else if (TotalBV >= 501 && TotalBV <= 999)
+                //{
+                //    lbgrandtotal.Text = TotalDP;
+                //    lbshipping.Text = "free";
+                //    lbtotalpayout.Text = (Convert.ToDecimal(TotalDP)).ToString();
+                //}
+                //else
+                //{
+                decimal Ship = Convert.ToDecimal(lbshipping.Text);
+
+                lbtotalpayout.Text = (TotalDP + Ship).ToString();
+                lbgrandtotal.Text = TotalDP.ToString();
+                // }
             }
             else
             {

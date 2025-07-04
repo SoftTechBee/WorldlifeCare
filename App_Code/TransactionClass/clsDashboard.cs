@@ -358,8 +358,35 @@ public class clsDashboard
 
         return total;
     }
-  
     public string CompanyTurnOver()
+    {
+        string total = "0";
+        try
+        {
+            string sql = "select sum(credit) from tblwallet where type='Payment'";
+            //if (Plantype == "Plan1")
+            //{
+            //    sql += " and PackType!='PORTFOLIO SERVICE'";
+            //}
+            //else if (Plantype == "Plan2")
+            //{
+            //    sql += " and PackType='PORTFOLIO SERVICE'";
+            //}
+            DataTable dt = objcon.ReturnDataTableSql(sql);
+            if (dt.Rows.Count > 0)
+            {
+                total = dt.Rows[0][0].ToString();
+                total = total == "" ? "0" : total;
+            }
+
+
+        }
+        catch (Exception ex)
+        { }
+
+        return total;
+    }
+    public string totapurchasing()
     {
         string total = "0";
         try

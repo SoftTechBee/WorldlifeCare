@@ -82,24 +82,24 @@ public partial class User_TopUpWallet : System.Web.UI.Page
                 totaldp.Text = dt.Rows[0]["DP"].ToString();
                 totalmrp.Text = dt.Rows[0]["MRP"].ToString();
                 Decimal TotalBV = Convert.ToDecimal(lbtotalBV.Text);
-                if (TotalBV >= 1 && TotalBV <= 500)
-                {
-                    lbgrandtotal.Text = totaldp.Text;
-                    lbshipping.Text = "Free";
-                    lbtotalpayout.Text = (Convert.ToDecimal(totaldp.Text) + 0).ToString();
-                }
-                else if (TotalBV >= 501 && TotalBV <= 999)
-                {
-                    lbgrandtotal.Text = totaldp.Text;
-                    lbshipping.Text = "Free";
-                    lbtotalpayout.Text = (Convert.ToDecimal(totaldp.Text) + 0).ToString();
-                }
-                else
-                {
-                    lbshipping.Text = "Free";
+                //if (TotalBV >= 1 && TotalBV <= 500)
+                //{
+                //    lbgrandtotal.Text = totaldp.Text;
+                //    lbshipping.Text = "Free";
+                //    lbtotalpayout.Text = (Convert.ToDecimal(totaldp.Text) + 0).ToString();
+                //}
+                //else if (TotalBV >= 501 && TotalBV <= 999)
+                //{
+                //    lbgrandtotal.Text = totaldp.Text;
+                //    lbshipping.Text = "Free";
+                //    lbtotalpayout.Text = (Convert.ToDecimal(totaldp.Text) + 0).ToString();
+                //}
+                //else
+                //{
+                    lbshipping.Text = "0";
                     lbtotalpayout.Text = Convert.ToDecimal(totaldp.Text).ToString();
                     lbgrandtotal.Text = totaldp.Text;
-                }
+               //}
             }
             else
             {
@@ -127,7 +127,7 @@ public partial class User_TopUpWallet : System.Web.UI.Page
 
         {
 
-            decimal widamount = 0, Price = 0, BV = 0, Qty = 0, Discount = 0;
+            decimal widamount = 0, Price = 0, BV = 0, Qty = 0, Discount = 0, Shipcharge = 0;
             string date = objtime.returnStringServerMachTime();
             string PackType = "";
             string id = SessionData.Get<string>("Newuser");
@@ -139,22 +139,22 @@ public partial class User_TopUpWallet : System.Web.UI.Page
             Qty = (Convert.ToDecimal(lbqty.Text.Trim()));
             Discount = (Convert.ToDecimal(totaldiscount.Text.Trim()));
             BV = (Convert.ToDecimal(totalbv.Text.Trim()));
-
+            Shipcharge = (Convert.ToDecimal(lbshipping.Text.Trim()));
             if (PaidStatus == "True")
             {
 
 
 
 
-                if (finalamount >= Price)
+                if (finalamount >= (Price+ Shipcharge))
                 {
 
 
-                    int a = objamd.ActiveMember(id, Price, BV,  "PRODUCTS PURCHASE",  SessionData.Get<string>("Newuser"), "R");
+                    int a = objamd.ActiveMember(id, Price, BV, Shipcharge.ToString(),  SessionData.Get<string>("Newuser"), "R");
                     if (a > 0)
                     {
 
-                        int b = objamd.PRODUCTBILL(0, "", SessionData.Get<string>("Newuser"), "", "", Qty, Convert.ToDecimal(totalmrp.Text), Discount, Price, BV, Price, 0, 0, 0, "", "C");
+                        int b = objamd.PRODUCTBILL(0, "", SessionData.Get<string>("Newuser"), "", "", Qty, Convert.ToDecimal(totalmrp.Text), Discount, Price, BV, Price, Shipcharge, 0, 0, rblDeliveryType.SelectedValue.Trim(), "C");
                         if (b > 0)
                         {
                             danger.Visible = false;
@@ -237,7 +237,26 @@ public partial class User_TopUpWallet : System.Web.UI.Page
 
         }
     }
+    protected void rblDeliveryType_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (rblDeliveryType.SelectedValue == "By Courier")
+        {
+            lbgrandtotal.Text = lbgrandtotal.Text;
+            lbshipping.Text = "100";
+            lbtotalpayout.Text = (Convert.ToDecimal(lbgrandtotal.Text) + 100).ToString();
+           
+        }
 
+        else
+        {
+            lbshipping.Text = "0";
+            lbtotalpayout.Text = Convert.ToDecimal(lbgrandtotal.Text).ToString();
+            lbgrandtotal.Text = lbgrandtotal.Text;
+           
+
+
+        }
+    }
     protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
     {
         if (e.CommandName == "remove")

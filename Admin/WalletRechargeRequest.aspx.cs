@@ -59,11 +59,11 @@ public partial class Admin_WalletRechargeRequest : System.Web.UI.Page
         {
             Label lbAmount = e.Item.FindControl("lbamount") as Label;
             Label lbutr = e.Item.FindControl("lbutr") as Label;
-            //Label lbtcx = e.Item.FindControl("lbtcx") as Label;
+            Label lbtcx = e.Item.FindControl("lbtcx") as Label;
             Label lbUserName = e.Item.FindControl("lbname") as Label;
             Label lbpaymentmode = e.Item.FindControl("lbpaymentmode") as Label;
             string wid = e.CommandArgument.ToString();
-            int a = objamd.RepuchaseRequest(Convert.ToInt32(wid),lbUserName.Text, lbAmount.Text, "", "Pending", objtime.returnCurrentSurverTimeHHMM(), "", "", "", "", "", "Recharge", "A");
+            int a = objamd.RepuchaseRequest(Convert.ToInt32(wid),lbUserName.Text, lbAmount.Text, "", "Pending", objtime.returnCurrentSurverTimeHHMM(), "", "", "", "", lbutr.Text, "Recharge", "A");
             if (a > 0)
             {
                 loaddirect();

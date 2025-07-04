@@ -6,10 +6,21 @@
 					<div class="col-md-3 mb-3">
 								<div class="card coin-card">
 									<div class="card-body ">
-										<h4 class="card-title" style="font-size:18px;"><b>Total Deposite</b></h4>
+										<h4 class="card-title" style="font-size:18px;"><b>Total Deposit</b></h4>
 										<div class="d-flex align-items-center">
 											
 											<h2 class="fs-38"><asp:Label ID="lbTotalDeposite" runat="server" Text="0"></asp:Label></h2>
+										</div>
+									</div>
+								</div>
+							</div>
+		<div class="col-md-3 mb-3">
+								<div class="card coin-card">
+									<div class="card-body ">
+										<h4 class="card-title" style="font-size:18px;"><b>Total Purchase</b></h4>
+										<div class="d-flex align-items-center">
+											
+											<h2 class="fs-38"><asp:Label ID="lbtotapurchasing" runat="server" Text="0"></asp:Label></h2>
 										</div>
 									</div>
 								</div>

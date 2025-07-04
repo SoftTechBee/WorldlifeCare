@@ -265,8 +265,8 @@
                                         <asp:Label runat="server" ID="lbinvoice"></asp:Label></h6>
                                     <h6 class="card-title" style="text-align: right; font-size: 10px">Invoice Date :
                                         <asp:Label runat="server" ID="lbdated"></asp:Label></h6>
-                                  <%--  <h6 class="card-title" style="text-align: right; font-size: 10px">Delivery Type :
-                                        <asp:Label runat="server" ID="lbdelivertype"></asp:Label></h6>--%>
+                                    <h6 class="card-title" style="text-align: right; font-size: 10px">Delivery Type :
+                                        <asp:Label runat="server" ID="lbdelivertype"></asp:Label></h6>
 
                                 </div>
 

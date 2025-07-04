@@ -121,7 +121,18 @@
                    <div class="cart-sub-total total">
 						<span>Payment Status:</span> <span><asp:Label ID="lbpaystatus" runat="server" Text="Un-Paid"></asp:Label></span>
 					</div>
-
+ <div class="cart-sub-total total">
+    <span>Delivery Type:<br /></span>
+                                    <hr />
+    <span>
+        <asp:RadioButtonList ID="rblDeliveryType" runat="server" OnSelectedIndexChanged="rblDeliveryType_SelectedIndexChanged" AutoPostBack="true"  CssClass="mt-2 text-primary fw-bold "  RepeatDirection="Horizontal" 
+                             RepeatLayout="Flow">
+            <asp:ListItem Selected="true" Value="Self Pickup">&nbsp Self Pickup &nbsp&nbsp</asp:ListItem>
+            <asp:ListItem Value="By Courier">&nbsp By Courier </asp:ListItem>
+        </asp:RadioButtonList>
+    </span>
+</div>
+<br />
                     <div class="col-md-4 col-sm-12 cart-shopping-total">
 	<table class="table">
 		<thead>
@@ -154,6 +165,10 @@
                                   <div class="col-sm-12">
                                   <asp:Button ID="btncheckout" OnClick="btncheckout_Click" OnClientClick="return confirmAction();"  runat="server" Text="Pay Now"   class=" btn btn-warning btn-sm" />
                </div>
+                        <hr /><p style="color: red;font-size:100% ">
+                                    <%--Note1: For Home Delivery, an additional charge of ₹100/- should be applied.<br />--%>
+  Note2: Home Delivery selected?. Please make sure your address is complete. Go to Edit Profile to add or update it before making the purchase.
+</p>
 </div>
             </div>
             <!-- /.box-body -->
